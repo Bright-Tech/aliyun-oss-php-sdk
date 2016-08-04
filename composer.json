@@ -1,13 +1,13 @@
 {
-    "name": "aliyuncs/oss-sdk-php",
-    "description": "Aliyun OSS SDK for PHP",
-    "homepage": "http://www.aliyun.com/product/oss/",
+    "name": "bright-tech/aliyun-oss-sdk-php",
+    "description": "Aliyun OSS SDK for PHP fork from offical edition",
+    "homepage": "http://www.bright-tech.cn/",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Aliyuncs",
-            "homepage": "http://www.aliyun.com"
+            "name": "Sam Xiao",
+            "homepage": "http://www.bright-tech.cn"
         }
     ],
     "require": {
