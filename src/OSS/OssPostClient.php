@@ -15,13 +15,6 @@ class OssPostClient
     protected $accessKeySecret;
 
 
-    /**
-     * 回调路径
-     * @var string
-     */
-    protected $callbackUrl;
-
-
 
     public $minFileSize = 0;
     public $maxFileSize = 1048576000;
@@ -33,18 +26,17 @@ class OssPostClient
      * @param string $accessKeySecret
      * @param string $callbackUrl
      */
-    public function __construct($accessKeyId, $accessKeySecret, $callbackUrl)
+    public function __construct($accessKeyId, $accessKeySecret)
     {
         $this->accessKeyId = $accessKeyId;
         $this->accessKeySecret = $accessKeySecret;
-        $this->callbackUrl = $callbackUrl;
     }
 
 
-    public function getClientPolicy()
+    public function getClientPolicy($callbackUrl)
     {
 
-        $callback_param = array('callbackUrl' => $this->callbackUrl,
+        $callback_param = array('callbackUrl' => $callbackUrl,
             'callbackBody' => 'object=${object}&size=${size}&mimeType=${mimeType}&height=${imageInfo.height}&width=${imageInfo.width}',
             'callbackBodyType' => "application/x-www-form-urlencoded");
         $callback_string = json_encode($callback_param);
