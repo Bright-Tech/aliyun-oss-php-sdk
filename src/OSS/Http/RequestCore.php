@@ -670,6 +670,7 @@ class RequestCore
         }
 
         // Process custom headers
+        $this->request_headers["Connection"] = "close";
         if (isset($this->request_headers) && count($this->request_headers)) {
             $temp_headers = array();
 
