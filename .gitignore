@@ -27,11 +27,14 @@ local.properties
 
 # PDT-specific
 .buildpath
+.project
+.settings
 
 #################
 ## PHPStorm
 #################
 .idea
+
 
 #############
 ## Windows detritus
@@ -72,3 +75,4 @@ Homestead.json
 _ide_helper.php
 n.tar.gz
 newcontest.0106.sql.tar.gz
+

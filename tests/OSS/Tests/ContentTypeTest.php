@@ -4,9 +4,6 @@ namespace OSS\Tests;
 
 require_once __DIR__ . '/Common.php';
 
-use OSS\OssClient;
-use OSS\Core\OssException;
-
 class ContentTypeTest extends \PHPUnit_Framework_TestCase
 {
     private function runCmd($cmd)
@@ -41,7 +38,7 @@ class ContentTypeTest extends \PHPUnit_Framework_TestCase
 
         $file = '/tmp/x.json';
         $object = 'test/y';
-        $this->runCmd('dd if=/dev/random of=' . $file . ' bs=1024 count=100');
+        $this->runCmd('dd if=/dev/urandom of=' . $file . ' bs=1024 count=100');
 
         $client->multiuploadFile($bucket, $object, $file, array('partSize' => 100));
         $type = $this->getContentType($bucket, $object);
@@ -80,7 +77,7 @@ class ContentTypeTest extends \PHPUnit_Framework_TestCase
 
         $file = '/tmp/x.mp3';
         $object = 'test/y.json';
-        $this->runCmd('dd if=/dev/random of=' . $file . ' bs=1024 count=100');
+        $this->runCmd('dd if=/dev/urandom of=' . $file . ' bs=1024 count=100');
 
         $client->multiuploadFile($bucket, $object, $file, array('partSize' => 100));
         $type = $this->getContentType($bucket, $object);
@@ -89,7 +86,7 @@ class ContentTypeTest extends \PHPUnit_Framework_TestCase
 
         $file = '/tmp/x.none';
         $object = 'test/y.json';
-        $this->runCmd('dd if=/dev/random of=' . $file . ' bs=1024 count=100');
+        $this->runCmd('dd if=/dev/urandom of=' . $file . ' bs=1024 count=100');
 
         $client->multiuploadFile($bucket, $object, $file, array('partSize' => 100));
         $type = $this->getContentType($bucket, $object);
@@ -123,7 +120,7 @@ class ContentTypeTest extends \PHPUnit_Framework_TestCase
 
         $file = '/tmp/x.json';
         $object = 'test/y';
-        $this->runCmd('dd if=/dev/random of=' . $file . ' bs=1024 count=100');
+        $this->runCmd('dd if=/dev/urandom of=' . $file . ' bs=1024 count=100');
 
         $client->multiuploadFile($bucket, $object, $file, array(
             'partSize' => 100,

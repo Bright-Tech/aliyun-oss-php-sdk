@@ -1,5 +1,30 @@
 # ChangeLog - Aliyun OSS SDK for PHP
 
+## v2.2.4 / 2017-04-25
+
+* fix getObject to local file bug
+
+## v2.2.3 / 2017-04-14
+
+* fix md5 check
+
+## v2.2.2 / 2017-01-18
+
+* 解决在php7上运行连接数和内存bug
+
+## v2.2.1 / 2016-12-01
+
+* 禁止http curl自动填充Accept-Encoding
+
+## v2.2.0 / 2016-11-22
+
+* 修复PutObject/CompleteMultipartUpload的返回值问题(#26)
+
+## v2.1.0 / 2016-11-12
+
+* 增加[RTMP](https://help.aliyun.com/document_detail/44297.html)接口
+* 增加支持[图片服务](https://help.aliyun.com/document_detail/44686.html)
+
 ## v2.0.7 / 2016-06-17
 
 * Support append object
